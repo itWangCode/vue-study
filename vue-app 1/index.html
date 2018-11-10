@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="style.css">
+	<script src="vue.js"></script>
+</head>
+<body>
+	<!-- vue-app是根容器 -->
+	<div id="vue-app">
+		<h1>itwang</h1>
+		<!-- <button v-on:click="age++">涨一岁</button>
+		<button v-on:click="age--">减一岁</button> -->
+		<button @click="add(1)">涨一岁</button>
+		<button v-on:click="subtract(1)">减一岁</button>
+
+		<button v-on:dblclick="add(10)">双击涨十岁</button>
+		<button v-on:dblclick="subtract(10)">双击减十岁</button>
+		<p>my age is {{age}}</p>
+
+		<div id="canvas" v-on:mousemove = "updateXY">{{x}},{{y}}</div>
+	</div>    
+	<script src="app.js"></script>
+</body>
+</html>
+
+<!-- 使用了{{}}用方法就要使用-----方法名() ；如果在click或在其他事情就可以有()，也可以没有括号
+	v-on:--可以简写：@
+-->
